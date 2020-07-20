@@ -36,15 +36,29 @@ class ClientsRepository extends ServiceEntityRepository
     }
     */
 
-    /*
-    public function findOneBySomeField($value): ?Clients
+    
+    public function findByFieldCelular($document, $celular): ?Clients
     {
         return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
+            ->andWhere('c.Documento = :val')
+            ->setParameter('val', $document)
+            ->andWhere('c.Celular = :celular')
+            ->setParameter('celular', $celular)
             ->getQuery()
             ->getOneOrNullResult()
         ;
     }
-    */
+
+    public function findByFieldEmail($document, $email): ?Clients
+    {
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.Documento = :val')
+            ->setParameter('val', $document)
+            ->andWhere('c.Email = :email')
+            ->setParameter('email', $email)
+            ->getQuery()
+            ->getOneOrNullResult()
+        ;
+    }
+    
 }
