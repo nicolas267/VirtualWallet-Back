@@ -28,6 +28,12 @@ class Wallet
      */
     private $balance;
 
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $confirmPay;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -53,6 +59,18 @@ class Wallet
     public function setBalance(float $balance): self
     {
         $this->balance = $balance;
+
+        return $this;
+    }
+
+    public function getConfirmPay(): ?float
+    {
+        return $this->confirmPay;
+    }
+
+    public function setConfirmPay(?float $confirmPay): self
+    {
+        $this->confirmPay = $confirmPay;
 
         return $this;
     }

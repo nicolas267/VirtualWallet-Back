@@ -36,15 +36,15 @@ class WalletRepository extends ServiceEntityRepository
     }
     */
 
-    /*
-    public function findOneBySomeField($value): ?Wallet
+    
+    public function findOneByIdClient($id): ?Wallet
     {
         return $this->createQueryBuilder('w')
-            ->andWhere('w.exampleField = :val')
-            ->setParameter('val', $value)
+            ->andWhere('w.id_client = :val')
+            ->setParameter('val', $id)
             ->getQuery()
             ->getOneOrNullResult()
         ;
     }
-    */
+    
 }
