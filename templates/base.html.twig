@@ -3,10 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    	<div id="app">
+            {% block body %}{% endblock %}
+        </div>
+        <script type="text/javascript" src="{{ asset('build/app.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/0.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/1.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/2.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/3.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/4.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/5.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/6.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/7.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/8.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/9.js') }}"></script>
     </body>
 </html>
